@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="design.css" />
+  <link rel="icon" type="image/png" href="output-onlinepngtools.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Newsreader:opsz,wght@6..72,254&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header>
+    <div class="logo">Isabella Maria Rangel</div>
+    <div class="page-links">
+      <a href="home.html">home</a>
+      <a href="gridweb.html">portfolio</a>
+      <a href="resume.html">resume</a>
+      <a href="aboutme.html">about me</a>
+    </div>
+  </header>
+
+  <h1>Welcome to My Portfolio</h1>
+
+  <!-- Hero (Banner) Section with overlay boxes -->
+  <section class="hero-image-container">
+    <!-- The main landscape image -->
+    <img src="3150-07.jpg" alt="Landscape Image" class="landscape-image" />
+
+    <!-- The two grey boxes near the bottom of the image -->
+    <div class="hero-boxes">
+      <a href="#python-projects" class="nav-box">Python Projects</a>
+      <a href="#business-cases" class="nav-box">Business Cases</a>
+    </div>
+  </section>
+
+
+
+  <!-- PYTHON PROJECTS SECTION -->
+  <!-- Give this an ID so the above link can jump here -->
+  <div id="python-projects" class="python-projects-container">
+    <h2 class="python-projects">Python Projects</h2>
+  </div>
+
+  <!-- Python Projects Grid (unchanged from your original) -->
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="IMG1608-R01-018A.jpg" alt="Cordell Bank Marine Reserve" />
+      <h3>CORDELL BANK MARINE RESERVE</h3>
+      <p>
+        I volunteered as a data analyst in the Coastal Oceanography Group at the
+        UC Davis Bodega Bay Marine Lab. I processed, cleaned, and visualized
+        archival data for physical properties of the Cordell Bank Marine Reserve.
+      </p>
+    </div>
+    <div class="grid-item">
+      <img src="3150-04.jpg" alt="Hong Kong IPO Research 2022" />
+      <h3>HONG KONG IPO RESEARCH 2022</h3>
+      <p>
+        I worked as a research assistant on this project for the HKUST finance
+        department and managed the Python analysis for the undergraduate research
+        group. I used Eikon, Bloomberg, yfinance API, and finnhub API to gather data
+        on IPOs and analyze performance within the initial 3 months after IPO.
+      </p>
+    </div>
+    <div class="grid-item">
+      <img src="IMG1607-R01-035A.jpg" alt="Zillow Housing" />
+      <h3>ZILLOW HOUSING</h3>
+      <p>
+        Used different types of regressors to build a model that predicts the log
+        difference between the actual home selling price and the “Zestimate”
+        based on characteristics that contribute to the rate of accuracy in
+        this estimate.
+      </p>
+    </div>
+    <div class="grid-item">
+      <img src="IMG1607-R01-027A.jpg" alt="Vaccine Predictor" />
+      <h3>VACCINE PREDICTOR</h3>
+      <p>
+        I built a machine learning model with a Random Forest regressor to
+        predict who would get the H1N1 and seasonal flu vaccines. I used
+        one-hot-encoding and analyzed variable importance to create an
+        accurate model. I took part in a competition with Driven Data and
+        scored in the top 15% of competitors for accuracy.
+      </p>
+    </div>
+  </div>
+
+  <!-- OPTIONAL: Another landscape image if you want a separator -->
+  <img src="IMG_7384.jpg" alt="Another Landscape Image" class="landscape-image-2" />
+
+  <!-- BUSINESS CASES SECTION -->
+  <!-- Give this an ID so the above link can jump here -->
+  <div id="business-cases" class="python-projects-container">
+    <h2 class="python-projects">Business Cases</h2>
+  </div>
+
+  <!-- Business Cases Grid (with PDF flipping logic) -->
+  <div class="grid-container">
+    <!-- Campus as a Living Lab -->
+    <div class="grid-item">
+      <div class="pdf-container">
+        <img id="campusImage" src="campus_page1.png" alt="Campus as a Living Lab" />
+        <div class="arrow arrow-left" onclick="prevPage('campus')">‹</div>
+        <div class="arrow arrow-right" onclick="nextPage('campus')">›</div>
+      </div>
+      <h3><a href="Presentations/Campus_Living_Lab.pdf" download>CAMPUS AS A LIVING LAB</a></h3>
+      <p>
+        I managed the alternative funding part of our recommendation, which
+        looked at ways to support the living lab outside of the HKUST
+        administration. I created the implementation strategy to get funding
+        from alumni, the government, and existing PE partnerships with the
+        entrepreneurship center.
+      </p>
+    </div>
+
+    <!-- PayMe -->
+    <div class="grid-item">
+      <div class="pdf-container">
+        <img id="paymeImage" src="payme_page1.png" alt="PayMe" />
+        <div class="arrow arrow-left" onclick="prevPage('payme')">‹</div>
+        <div class="arrow arrow-right" onclick="nextPage('payme')">›</div>
+      </div>
+      <h3><a href="Presentations/PayMe.pdf" download>PAYME</a></h3>
+      <p>
+        <!-- Add your description here -->
+        ...
+      </p>
+    </div>
+
+    <!-- Ocean Park -->
+    <div class="grid-item">
+      <div class="pdf-container">
+        <img id="oceanImage" src="ocean_page1.png" alt="Ocean Park" />
+        <div class="arrow arrow-left" onclick="prevPage('ocean')">‹</div>
+        <div class="arrow arrow-right" onclick="nextPage('ocean')">›</div>
+      </div>
+      <h3><a href="Presentations/Ocean_Park.pdf" download>OCEAN PARK</a></h3>
+      <p>
+        My team was a finalist in the World Bachelor in Business case
+        competition. I managed the implementation strategy for our
+        recommendation to re-structure the “experience” for guests by
+        creating clear themes and a recommended path through the park.
+      </p>
+    </div>
+
+    <!-- Toyota EV in China -->
+    <div class="grid-item">
+      <div class="pdf-container">
+        <img id="toyotaImage" src="toyota_page1.png" alt="Toyota EV in China" />
+        <div class="arrow arrow-left" onclick="prevPage('toyota')">‹</div>
+        <div class="arrow arrow-right" onclick="nextPage('toyota')">›</div>
+      </div>
+      <h3><a href="Presentations/Toyota.pdf" download>TOYOTA EV IN CHINA</a></h3>
+      <p>
+        My team presented a strategy to increase market share in the China EV
+        market. This was done by capitalizing on the established Toyota brand,
+        increasing sustainability, and creating a digitization initiative.
+      </p>
+    </div>
+  </div>
+
+  <!-- PDF.js Scripts and "page-flip" logic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js"></script>
+  <script>
+    // Set up PDF.js worker
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+
+    // Track each PDF item
+    const pdfItems = {
+      payme: {
+        pdfUrl: 'Presentations/PayMe.pdf',
+        imageId: 'paymeImage',
+        doc: null,
+        currentPage: 1,
+        totalPages: 0,
+        scale: 1.0
+      },
+      ocean: {
+        pdfUrl: 'Presentations/Ocean_Park.pdf',
+        imageId: 'oceanImage',
+        doc: null,
+        currentPage: 1,
+        totalPages: 0,
+        scale: 1.0
+      },
+      dairy: {
+        pdfUrl: 'Presentations/LandOLakes.pdf',
+        imageId: 'dairyImage',
+        doc: null,
+        currentPage: 1,
+        totalPages: 0,
+        scale: 1.0
+      },
+      campus: {
+        pdfUrl: 'Presentations/Campus_Living_Lab.pdf',
+        imageId: 'campusImage',
+        doc: null,
+        currentPage: 1,
+        totalPages: 0,
+        scale: 1.0
+      },
+      toyota: {
+        pdfUrl: 'Presentations/Toyota.pdf',
+        imageId: 'toyotaImage',
+        doc: null,
+        currentPage: 1,
+        totalPages: 0,
+        scale: 1.0
+      }
+    };
+
+    // Load all PDFs on page load and render page 1 for each
+    window.addEventListener('load', () => {
+      Object.keys(pdfItems).forEach(key => {
+        const item = pdfItems[key];
+        pdfjsLib.getDocument(item.pdfUrl).promise.then(pdf => {
+          item.doc = pdf;
+          item.totalPages = pdf.numPages;
+          item.currentPage = 1;
+          renderPDFPage(key, 1);
+        });
+      });
+    });
+
+    // Render a given page of a PDF into the <img> (via canvas)
+    function renderPDFPage(key, pageNum) {
+      const item = pdfItems[key];
+      item.doc.getPage(pageNum).then(page => {
+        const viewport = page.getViewport({ scale: item.scale });
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        page.render({ canvasContext: ctx, viewport }).promise.then(() => {
+          const dataURL = canvas.toDataURL('image/png');
+          document.getElementById(item.imageId).src = dataURL;
+        });
+      });
+    }
+
+    // Flip to next page
+    function nextPage(key) {
+      const item = pdfItems[key];
+      if (item.currentPage < item.totalPages) {
+        item.currentPage++;
+        renderPDFPage(key, item.currentPage);
+      }
+    }
+
+    // Flip to previous page
+    function prevPage(key) {
+      const item = pdfItems[key];
+      if (item.currentPage > 1) {
+        item.currentPage--;
+        renderPDFPage(key, item.currentPage);
+      }
+    }
+  </script>
+</body>
+</html>
