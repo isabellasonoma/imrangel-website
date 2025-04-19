@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="output-onlinepngtools.png" />
+  <link rel="stylesheet" href="design.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Newsreader:opsz,wght@6..72,254&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Reset and basic styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .logo {
+      font-family: "Newsreader", serif;
+      font-size: 32px;
+      color: #016B01;
+      font-weight: 500;
+    }
+
+    .page-links a {
+      display: inline-block;
+      margin-left: 20px;
+      text-decoration: none;
+      color: #000;
+      position: relative;
+      padding: 10px;
+    }
+
+    /* 
+      TOP SECTION: 
+      - Polygons pinned 10px from each edge
+      - Text truly centered
+    */
+    .top-section {
+      position: relative;
+      width: 100%;
+      min-height: 400px; /* Enough space for polygons + text */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      overflow: visible; /* no clipping of polygons */
+    }
+
+    /* Left polygon pinned 10px from the top/left edge */
+    .polygon-left {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: calc(100% - 20px); /* fill vertical space minus 20px top/bottom gap */
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Right polygon pinned 10px from the top/right edge */
+    .polygon-right {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      height: calc(100% - 20px);
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Centered text on top of polygons */
+    .center-text {
+      text-align: center;
+      z-index: 1; /* Above the polygons */
+      max-width: 800px;
+      margin: 0 20px; /* Some side padding so text isn't flush to screen edges */
+    }
+
+    .giant_intro {
+      font-family: "Newsreader", serif;
+      font-size: 45px;
+      font-weight: 350;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      margin-left: 100px; /* You had this in your code; adjust or remove if undesired */
+      margin-right: 100px;
+      color: #000;
+    }
+
+    .green-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #016B01;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .green-button:hover {
+      background-color: #005c00;
+    }
+
+    /*
+      BOTTOM SECTION:
+      - 13% side margins
+      - Two images side by side on larger screens
+      - Stack on mobile
+      - "Transpose" dimensions:
+         1) First image: limited by max-height, width auto
+         2) Second image: limited by max-width, height auto
+      - No fixed pixel sizes, just relative constraints
+    */
+    .bottom-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 40px 13%; /* 13% side margins */
+      flex-wrap: nowrap;
+    }
+
+    /* 
+      First image: "transpose-1" 
+      - Bounded by max-height, so it won't exceed the viewport's vertical space 
+      - 'vh' is a relative unit: 60vh = 60% of the viewport height 
+    */
+    .transpose-1 {
+      max-height: 60vh;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* 
+      Second image: "transpose-2" 
+      - Bounded by max-width, so it won't exceed a percentage of viewport width 
+    */
+    .transpose-2 {
+      max-width: 60vw;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* MEDIA QUERIES */
+    @media (max-width: 768px) {
+      .top-section {
+        min-height: 300px;
+      }
+      .polygon-left,
+      .polygon-right {
+        top: 5px;
+        height: calc(100% - 10px);
+      }
+      .giant_intro {
+        font-size: 32px;
+      }
+      /* Stack images vertically on mobile */
+      .bottom-section {
+        flex-wrap: wrap;
+        margin: 20px 5%;
+      }
+      .bottom-section img {
+        margin-bottom: 20px;
+        max-width: 100%; /* Let them fill the width on mobile */
+        max-height: 60vh; /* Keep them from exceeding the viewport height */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Isabella Maria Rangel</div>
+    <div class="page-links">
+      <a href="home.html">home</a>
+      <a href="gridweb.html">portfolio</a>
+      <a href="resume.html">resume</a>
+      <a href="aboutme.html">about me</a>
+    </div>
+  </header>
+
+  <!-- TOP SECTION -->
+  <section class="top-section">
+    <!-- Polygons pinned with 10px gap -->
+    <img src="Polygon 2.png" alt="Left Polygon" class="polygon-left" />
+    <img src="Polygon 3.png" alt="Right Polygon" class="polygon-right" />
+    <!-- Centered text and button -->
+    <div class="center-text">
+      <div class="giant_intro">
+        I am a student who loves the outdoors
+        and is passionate about data.
+      </div>
+      <a href="gridweb.html" class="green-button">View My Portfolio</a>
+    </div>
+  </section>
+
+  <!-- BOTTOM SECTION: Two "transpose dimension" images -->
+  <section class="bottom-section">
+    <img
+      src="IMG1608-R01-015A.jpg"
+      alt="Image 1"
+      class="transpose-1"
+    />
+    <img
+      src="test2.jpg"
+      alt="Image 2"
+      class="transpose-2"
+    />
+  </section>
+</body>
+</html>
