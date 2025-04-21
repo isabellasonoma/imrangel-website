@@ -25,32 +25,7 @@
       background: #fff;
     }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      background: #fff;
-    }
-
-    .logo {
-      font-family: "Newsreader", serif;
-      font-size: 32px;
-      color: #016B01;
-      font-weight: 500;
-    }
-
-    .page-links a {
-      display: inline-block;
-      margin-left: 20px;
-      text-decoration: none;
-      color: #000;
-      position: relative;
-      padding: 10px;
-    }
-
+    
     /* 
       TOP SECTION: 
       - Polygons pinned 10px from each edge
@@ -161,30 +136,6 @@
       object-fit: contain;
     }
 
-    /* MEDIA QUERIES */
-    @media (max-width: 768px) {
-      .top-section {
-        min-height: 300px;
-      }
-      .polygon-left,
-      .polygon-right {
-        top: 5px;
-        height: calc(100% - 10px);
-      }
-      .giant_intro {
-        font-size: 32px;
-      }
-      /* Stack images vertically on mobile */
-      .bottom-section {
-        flex-wrap: wrap;
-        margin: 20px 5%;
-      }
-      .bottom-section img {
-        margin-bottom: 20px;
-        max-width: 100%; /* Let them fill the width on mobile */
-        max-height: 60vh; /* Keep them from exceeding the viewport height */
-      }
-    }
   </style>
 </head>
 
