@@ -32,13 +32,38 @@
     <!-- The main landscape image -->
     <img src="Images/3150-07.jpg" alt="Landscape Image" class="landscape-image" />
 
-    <!-- The two grey boxes near the bottom of the image -->
-    <div class="hero-boxes">
-      <a href="#python-projects" class="nav-box">Python Projects</a>
-      <a href="#business-cases" class="nav-box">Business Cases</a>
-    </div>
+   
   </section>
 
+  <!-- THESIS SECTION -->
+  <div id="thesis" class="python-projects-container">
+    <h2 class="section-title">Undergraduate Thesis</h2>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="Images/storage.jpg" alt="Thesis Cover: Ethiopia Cereal Storage" />
+    </div>
+    <div class="grid-item">
+      <h3>Optimizing Ethiopia’s Cereal Crop Storage Infrastructure</h3>
+      <p>
+        My research integrated geospatial analysis, network science, and optimization models to propose efficient storage infrastructure locations, aiming to reduce postharvest cereal losses in Ethiopia. I worked extensively with Python, using tools like GeoPandas, Rasterio, and NetworkX to clean and model spatial data, and implemented mixed-integer programming with Gurobi to solve facility location problems under real-world constraints. I then extended this model with multi-objective considerations.
+       </p>
+        <div class="resume-links">
+          <a class="green-button" href="Documents/Rangel_Thesis.pdf" download>Download Thesis</a>
+        </div>
+    </div>
+  </div>
+
+
+  <section class="photo-journal">
+    <div class="gallery-grid">
+      <img src="Images/thesis1.png" alt="Thesis" />
+      <img src="Images/thesis2.png" alt="Thesis" />
+      <img src="Images/thesis4.png" alt="Thesis" />
+      <img src="Images/thesis3.png" alt="Thesis" />
+    </div>
+  </section>
 
 
   <!-- PYTHON PROJECTS SECTION -->
@@ -91,9 +116,9 @@
     </div>
   </div>
 
-  <!-- OPTIONAL: Another landscape image if you want a separator -->
-  <img src="Images/IMG_7384.jpg" alt="Another Landscape Image" class="landscape-image-2" />
-
+  <!-- OPTIONAL: Another landscape image if you want a separator <img src="Images/IMG_7384.jpg" alt="Another Landscape Image" class="landscape-image-2" />
+-->
+  
   <!-- BUSINESS CASES SECTION -->
   <!-- Give this an ID so the above link can jump here -->
   <div id="business-cases" class="python-projects-container">
@@ -128,8 +153,7 @@
       </div>
       <h3><a href="Presentations/PayMe.pdf" download>PAYME</a></h3>
       <p>
-        <!-- Add your description here -->
-        ...
+       This case study focused on the fintech industry, with our target demographic being Gen Z in Hong Kong. This was presented for the Information Systems course at HKUST.
       </p>
     </div>
 
@@ -164,6 +188,25 @@
       </p>
     </div>
   </div>
+
+ <!-- Report SECTION 
+ <div id="reports" class="python-projects-container">
+  <h2 class="section-title">Reports</h2>
+</div>
+<div class="grid-container">
+  <div class="grid-item">
+    <div class="pdf-container">
+      <img id="refImage" src="ref_page1.png" alt="Reformation" />
+      <div class="arrow arrow-left" onclick="prevPage('ref')">‹</div>
+      <div class="arrow arrow-right" onclick="nextPage('ref')">›</div>
+    </div>
+    <h3><a href="Documents/ref.pdf" download>REFORMATION</a></h3>
+    <p>
+      ...
+    </p>
+  </div>
+</div>
+-->
 
   <!-- PDF.js Scripts and "page-flip" logic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
@@ -210,6 +253,22 @@
       toyota: {
         pdfUrl: 'Presentations/Toyota.pdf',
         imageId: 'toyotaImage',
+        doc: null,
+        currentPage: 1,
+        totalPages: 0,
+        scale: 1.0
+      }
+      ref: {
+        pdfUrl: 'Documents/ref.pdf',
+        imageId: 'refImage',
+        doc: null,
+        currentPage: 1,
+        totalPages: 0,
+        scale: 1.0
+      }
+      hkipo: {
+        pdfUrl: 'Documents/hkipo.pdf',
+        imageId: 'hkipoImage',
         doc: null,
         currentPage: 1,
         totalPages: 0,
@@ -266,3 +325,5 @@
   </script>
 </body>
 </html>
+
+
