@@ -200,8 +200,9 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   max-width: 1200px;
-  margin: 40px auto 0;
-  min-height: 300px;
+  margin: 20px auto;
+  padding: 10px 0;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -342,14 +343,23 @@ header {
   top: 50%;
   transform: translateY(-50%);
   font-size: 3em;
-  color: #555;
+  color: #020202;
+  /* 1px white outline in WebKit browsers */
+  -webkit-text-stroke: 1px #fff;
+  
+  /* fallback outline via text‑shadow for other browsers */
+  text-shadow:
+    -1px -1px 0 #fff,
+     1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+     1px  1px 0 #fff;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s;
 }
 .arrow-left { left: 10px; }
 .arrow-right { right: 10px; }
-.pdf-container:hover .arrow { opacity: 0.5; }
+.pdf-container:hover .arrow { opacity: 1; }
 .arrow:hover { opacity: 1; }
 
 /* ====================== */
@@ -371,25 +381,30 @@ header {
   header {
     flex-direction: column;
     text-align: center;
+    padding: 10px;               /* less space around the header */
   }
+
   .page-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;          /* small horizontal gap between links */
-    margin-top: 10px;  /* keep your existing top spacing */
+    flex-wrap: nowrap;           /* keep them on one line */
+    justify-content: space-around; /* even spacing across the width */
+    gap: 4px;                    /* smaller gap between links */
+    padding: 0 5px;              /* small side insets */
+    margin-top: 8px;             /* tighten vertical spacing */
   }
+
   .page-links a {
-    margin: 0;
-    padding: 6px 10px;
+    flex: 1;                     /* evenly distribute width */
+    text-align: center;
+    padding: 4px 6px;            /* slimmer touch targets */
     white-space: nowrap;
+    font-size: 14px;             /* optional: shrink text a bit */
   }
+
   .page-links a:hover::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100px;
+    /* if you’re still using the hover bg, adjust its width too */
+    background-size: 80px auto;  /* narrower highlight */
+    width: 80px;
     height: 100%;                /* keep full link height */
     background-image: url('./Images/Rectangle_20.png');
     background-position: center;
@@ -452,6 +467,7 @@ header {
   .green-button {
     padding: 10px 20px;  /* restore original padding */
   }
+  
 }
 
 
