@@ -402,6 +402,24 @@ header {
     .spacer-image {
       max-width: 100%;
     }
+
+
+      /* make the links a wrapping flex row */
+      .page-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;          /* small horizontal gap between links */
+        margin-top: 10px;  /* keep your existing top spacing */
+      }
+    
+      /* reset the per‑link margin, shrink padding if needed */
+      .page-links a {
+        margin: 0;         /* remove the default 20px left margin */
+        padding: 6px 10px; /* slightly smaller touch target */
+        white-space: nowrap; /* prevent wrapping inside a single link */
+      }
+    
 }
 
 /* ---------------------- */
